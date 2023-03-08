@@ -14,7 +14,7 @@ namespace LogicalDay6
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4. Exit");
+                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4.Reverse Number 5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -37,6 +37,12 @@ namespace LogicalDay6
                         primeNumber.PrimeNumberCheck(P);
                         break;
                     case 4:
+                        Console.WriteLine("Enter the Number");
+                        int R = Convert.ToInt32(Console.ReadLine());
+                        Reverse reverse = new Reverse();
+                        reverse.ReverseNumber(R);
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }
