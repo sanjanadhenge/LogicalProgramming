@@ -14,7 +14,7 @@ namespace LogicalDay6
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4.Reverse Number 5.Day Of Week 6.Temperature conversion 7.Exit");
+                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4.Reverse Number 5.Day Of Week 6.Temperature conversion 7.Monthly Payment 8.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -61,6 +61,16 @@ namespace LogicalDay6
                         tempConversion.Conversion(C,T);
                         break;
                     case 7:
+                        Console.WriteLine("Enter Principle Amount");
+                        double Amount = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Year");
+                        double Year = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Rate");
+                        double Rate = Convert.ToInt32(Console.ReadLine());
+                        MonthlyPayment monthlyPayment = new MonthlyPayment();
+                        monthlyPayment.CalculatePayment(Amount, Year, Rate);
+                        break;
+                    case 8:
                         flag = false;
                         break;
                 }
