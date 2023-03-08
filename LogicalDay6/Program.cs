@@ -14,7 +14,7 @@ namespace LogicalDay6
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Exit");
+                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -31,6 +31,12 @@ namespace LogicalDay6
                         perfectNumber.CheckPerfect(N);
                         break;
                     case 3:
+                        Console.WriteLine("Enter the Number");
+                        int P = Convert.ToInt32(Console.ReadLine());
+                        PrimeNumber primeNumber = new PrimeNumber();
+                        primeNumber.PrimeNumberCheck(P);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
