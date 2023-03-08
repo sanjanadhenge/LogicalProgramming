@@ -14,7 +14,7 @@ namespace LogicalDay6
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4.Reverse Number 5.Day Of Week 6.Exit");
+                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4.Reverse Number 5.Day Of Week 6.Temperature conversion 7.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -53,6 +53,14 @@ namespace LogicalDay6
                         dayOfWeek.Get_Weekday(d, m, y);
                         break;
                     case 6:
+                        Console.WriteLine("Select the Option 1. Celsius to Fahrenheit 2.Fahrenheit to  Celsius ");
+                        int C = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Temperature");
+                        int T = Convert.ToInt32(Console.ReadLine());
+                        TempConversion tempConversion = new TempConversion();
+                        tempConversion.Conversion(C,T);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
