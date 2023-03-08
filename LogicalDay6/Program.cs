@@ -14,7 +14,7 @@ namespace LogicalDay6
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4.Reverse Number 5.Exit");
+                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4.Reverse Number 5.Day Of Week 6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -43,6 +43,16 @@ namespace LogicalDay6
                         reverse.ReverseNumber(R);
                         break;
                     case 5:
+                        Console.WriteLine("Enter Day");
+                        int d = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Month");
+                        int m = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Year");
+                        int y = Convert.ToInt32(Console.ReadLine());
+                        DayOfWeek dayOfWeek = new DayOfWeek();
+                        dayOfWeek.Get_Weekday(d, m, y);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
