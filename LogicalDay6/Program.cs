@@ -14,7 +14,7 @@ namespace LogicalDay6
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4.Reverse Number 5.Day Of Week 6.Temperature conversion 7.Monthly Payment 8.StopWatch 9.Exit");
+                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4.Reverse Number 5.Day Of Week 6.Temperature conversion 7.Monthly Payment 8.StopWatch 9.Coupen Number 10.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -74,7 +74,13 @@ namespace LogicalDay6
                         StopWatch stopWatch = new StopWatch();
                         stopWatch.Run();
                         break;
-                    case 9:
+                     case 9:
+                        Console.WriteLine("Enter the Number of Coupen");
+                        int Num = Convert.ToInt32(Console.ReadLine());
+                        CoupenNumbercs coupen = new CoupenNumbercs();
+                        coupen.CreateNumber(Num);
+                        break;
+                    case 10:
                         flag = false;
                         break;
                 }
