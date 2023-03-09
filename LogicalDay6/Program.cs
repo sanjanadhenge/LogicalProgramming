@@ -14,7 +14,7 @@ namespace LogicalDay6
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4.Reverse Number 5.Day Of Week 6.Temperature conversion 7.Monthly Payment 8.Exit");
+                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4.Reverse Number 5.Day Of Week 6.Temperature conversion 7.Monthly Payment 8.StopWatch 9.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -71,6 +71,10 @@ namespace LogicalDay6
                         monthlyPayment.CalculatePayment(Amount, Year, Rate);
                         break;
                     case 8:
+                        StopWatch stopWatch = new StopWatch();
+                        stopWatch.Run();
+                        break;
+                    case 9:
                         flag = false;
                         break;
                 }
