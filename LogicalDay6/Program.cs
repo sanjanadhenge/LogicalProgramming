@@ -14,7 +14,7 @@ namespace LogicalDay6
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nSelect an option \n1.Fibonacci Series \n2.Perfect Number\n3.Prime Number\n4.Reverse Number\n5.Day Of Week\n6.Temperature conversion\n7.Monthly Payment\n8.StopWatch\n9.Coupen Number\n10.Vending Machine\n11.Square Root\n12. Decimal To Binary\n13.Exit");
+                Console.WriteLine("\nSelect an option \n1.Fibonacci Series \n2.Perfect Number\n3.Prime Number\n4.Reverse Number\n5.Day Of Week\n6.Temperature conversion\n7.Monthly Payment\n8.StopWatch\n9.Coupen Number\n10.Vending Machine\n11.Square Root\n12. Decimal To Binary\n13.Binary Swap\n14.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -99,6 +99,12 @@ namespace LogicalDay6
                         decimalToBinary.Conversion(B);
                         break;
                     case 13:
+                        Console.WriteLine("Enter the Number");
+                        int Y = Convert.ToInt32(Console.ReadLine());
+                        BinarySwap binarySwap = new BinarySwap();
+                        binarySwap.swap(Y);
+                        break;
+                    case 14:
                         flag = false;
                         break;
                 }

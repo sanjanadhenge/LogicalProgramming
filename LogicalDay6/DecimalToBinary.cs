@@ -8,20 +8,17 @@ namespace LogicalDay6
 {
     public class DecimalToBinary
     {
-        public void Conversion(int B)
+        public int[] Conversion(int B)
         {
-            int[] arr = new int[50];
+            int[] arr = new int[8];
             int count = 0;
-            for(int i=0;i<10 && B >=0;i++)
+            for(int i=0;i<8 && B >=0;i++)
             {
                 arr[i] = B % 2;
                 B = B / 2;
                 count++;
             }
-            for(int j=count; j>=0; j--)
-            {
-                Console.Write(arr[j]);
-            }
+            return arr;
 
         }
     }
