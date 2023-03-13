@@ -14,7 +14,7 @@ namespace LogicalDay6
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option \n1.Fibonacci Series \n2.Perfect Number\n3.Prime Number\n4.Reverse Number\n5.Day Of Week\n6.Temperature conversion\n7.Monthly Payment\n8.StopWatch\n9.Coupen Number\n10.Vending Machine\n11.Square Root\n12.Exit");
+                Console.WriteLine("\nSelect an option \n1.Fibonacci Series \n2.Perfect Number\n3.Prime Number\n4.Reverse Number\n5.Day Of Week\n6.Temperature conversion\n7.Monthly Payment\n8.StopWatch\n9.Coupen Number\n10.Vending Machine\n11.Square Root\n12. Decimal To Binary\n13.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -93,6 +93,12 @@ namespace LogicalDay6
                         squareRoot.CalculateRoot(Root);
                         break;
                     case 12:
+                        Console.WriteLine("Enter the Number");
+                        int B = Convert.ToInt32(Console.ReadLine());
+                        DecimalToBinary decimalToBinary = new DecimalToBinary();
+                        decimalToBinary.Conversion(B);
+                        break;
+                    case 13:
                         flag = false;
                         break;
                 }
