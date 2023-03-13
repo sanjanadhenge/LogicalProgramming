@@ -14,7 +14,7 @@ namespace LogicalDay6
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option 1.Fibonacci Series 2.Perfect Number 3.Prime Number 4.Reverse Number 5.Day Of Week 6.Temperature conversion 7.Monthly Payment 8.StopWatch 9.Coupen Number 10.Vending Machine 11.Exit");
+                Console.WriteLine("Select an option \n1.Fibonacci Series \n2.Perfect Number\n3.Prime Number\n4.Reverse Number\n5.Day Of Week\n6.Temperature conversion\n7.Monthly Payment\n8.StopWatch\n9.Coupen Number\n10.Vending Machine\n11.Square Root\n12.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -87,6 +87,12 @@ namespace LogicalDay6
                         vendingMachine.NotesReturned(A);
                         break;
                     case 11:
+                        Console.WriteLine("Enter the Number");
+                        int Root = Convert.ToInt32(Console.ReadLine());
+                        SquareRoot squareRoot = new SquareRoot();
+                        squareRoot.CalculateRoot(Root);
+                        break;
+                    case 12:
                         flag = false;
                         break;
                 }
